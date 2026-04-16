@@ -26,6 +26,9 @@ for event in /dev/input/event*; do
         name=$(udevadm info --query=property --name="$event" 2>/dev/null | grep "ID_MODEL=" | cut -d= -f2)
         [ -z "$name" ] && name=$(basename "$event")
 
+        # Skip mouse dongles and non-keyboard devices
+        echo "$name" | grep -qi "mouse" && continue
+
         echo "Found keyboard: $name ($event)"
 
         # Create a config from template with this device path
