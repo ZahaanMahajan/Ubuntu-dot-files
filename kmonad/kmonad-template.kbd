@@ -1,0 +1,38 @@
+;; KMonad config template — DEVICE_PATH is replaced by the launcher script
+(defcfg
+  input  (device-file "DEVICE_PATH")
+  output (uinput-sink "KMonad")
+  fallthrough true
+  allow-cmd false
+)
+
+(defsrc
+  esc   f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+  grv   1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab   q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps  a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft  z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl  lmet lalt           spc            ralt rmet cmp  rctl
+)
+
+(defalias
+  cc (layer-toggle ctrl-layer)
+)
+
+(deflayer base
+  esc   f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+  grv   1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab   q    w    e    r    t    y    u    i    o    p    [    ]    \
+  @cc   a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft  z    x    c    v    b    n    m    ,    .    /    rsft
+  @cc   lmet lalt           spc            ralt rmet cmp  rctl
+)
+
+(deflayer ctrl-layer
+  C-esc  C-f1 C-f2 C-f3 C-f4 C-f5 C-f6 C-f7 C-f8 C-f9 C-f10 C-f11 C-f12
+  C-grv  C-1  C-2  C-3  C-4  C-5  C-6  C-7  C-8  C-9  C-0   C--   C-=   C-bspc
+  C-tab  C-q  C-w  C-e  C-r  C-t  C-y  C-u  C-i  C-o  C-p   esc   C-]   C-\
+  _      C-a  C-s  C-d  C-f  C-g  left down up   rght  C-;   C-'   C-ret
+  C-lsft C-z  C-x  C-c  C-v  C-b  C-n  C-m  C-,  C-.  C-/   C-rsft
+  _      C-lmet C-lalt       C-spc          C-ralt C-rmet C-cmp C-rctl
+)
