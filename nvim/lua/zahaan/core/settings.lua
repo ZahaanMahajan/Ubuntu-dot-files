@@ -11,8 +11,8 @@ vim.opt.smartindent = true
 vim.opt.hlsearch = true
 vim.opt.backup = false
 vim.opt.showcmd = true
-vim.opt.cmdheight = 3
-vim.opt.laststatus = 4
+vim.opt.cmdheight = 0
+vim.opt.laststatus = 1
 vim.opt.expandtab = true
 vim.opt.scrolloff = 12
 vim.opt.backupskip = { "/tmp/*", "/private/tmp/*" }
@@ -29,7 +29,6 @@ vim.opt.wildignore:append({ "*/node_modules/*" })
 vim.opt.splitbelow = true -- Put new windows below current
 vim.opt.splitright = true -- Put new windows right of current
 vim.opt.splitkeep = "cursor"
-vim.opt.mouse = ""
 
 vim.g.lazyvim_prettier_needs_config = true
 vim.g.lazyvim_picker = "telescope"

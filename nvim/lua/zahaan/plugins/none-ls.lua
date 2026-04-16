@@ -1,4 +1,4 @@
--- lua/ejiqpep/plugins/none-ls.lua --
+-- lua/zahaan/plugins/none-ls.lua --
 
 return {
 	"nvimtools/none-ls.nvim",
