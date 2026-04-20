@@ -1,6 +1,9 @@
-# dotfiles — ~/.config
+# dotfiles
 
 A collection of terminal and editor configs centered around a **Gruvbox** theme and **Vim-style** keyboard workflow.
+
+![vim-1](assets/vim-1.png)
+![vim-2](assets/vim-2.png)
 
 ---
 
