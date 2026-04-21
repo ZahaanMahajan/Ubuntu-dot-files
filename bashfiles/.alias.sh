@@ -359,6 +359,33 @@ alias realias='source ~/.alias.sh && echo "✔ .alias.sh reloaded"'
 alias catbash='cat ~/.bashrc     | less'
 alias cataliases='cat ~/.alias.sh  | less'
 
+# ------------------------------------------------------------
+#  BACKUP BASH CONFIG FILES
+# ------------------------------------------------------------
+# Copies ~/.bashrc and ~/.alias.sh to ~/.config/bashfiles/
+# Creates the directory if it doesn't exist
+ 
+BASH_BACKUP_DIR="$HOME/.config/bashfiles"
+ 
+backupbash() {
+    mkdir -p "$BASH_BACKUP_DIR"
+    cp -v ~/.bashrc   "$BASH_BACKUP_DIR/.bashrc"
+    cp -v ~/.alias.sh "$BASH_BACKUP_DIR/.alias.sh"
+    echo "✔ Backed up to $BASH_BACKUP_DIR  [$(date '+%Y-%m-%d %H:%M:%S')]"
+}
+ 
+# Show what's inside the backup folder
+alias lsbash='ls -lh "$BASH_BACKUP_DIR"'
+ 
+# Open the backup folder
+alias cdbash='cd "$BASH_BACKUP_DIR"'
+ 
+# Quick-diff: compare live file vs backed-up file
+diffbash() {
+    echo "=== .bashrc diff ===" && diff ~/.bashrc "$BASH_BACKUP_DIR/.bashrc"; \
+    echo "=== .alias.sh diff ===" && diff ~/.alias.sh "$BASH_BACKUP_DIR/.alias.sh"
+}
+
 # ============================================================
 #  END OF .alias.sh
 # ============================================================
