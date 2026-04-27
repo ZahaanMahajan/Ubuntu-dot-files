@@ -9,9 +9,9 @@ config.color_scheme = "Gruvbox dark, hard (base16)"
 
 -- ── Font ───────────────────────────────────────────
 config.font = wezterm.font_with_fallback({
-  { family = "JetBrainsMono Nerd Font", weight = "Medium" },
-  { family = "JetBrains Mono",          weight = "Medium" },
-  "Noto Color Emoji",
+	{ family = "JetBrainsMono Nerd Font", weight = "Medium" },
+	{ family = "JetBrains Mono", weight = "Medium" },
+	"Noto Color Emoji",
 })
 config.font_size = 13.0
 config.line_height = 1.2
@@ -28,26 +28,26 @@ config.tab_bar_at_bottom = true
 
 -- Gruvbox Dark colors for the tab bar
 config.colors = {
-  tab_bar = {
-    background = "#1d2021",       -- bg0_h (darkest)
-    active_tab = {
-      bg_color = "#282828",       -- bg0
-      fg_color = "#ebdbb2",       -- fg1
-      intensity = "Bold",
-    },
-    inactive_tab = {
-      bg_color = "#1d2021",       -- bg0_h
-      fg_color = "#928374",       -- gray
-    },
-    inactive_tab_hover = {
-      bg_color = "#3c3836",       -- bg1
-      fg_color = "#ebdbb2",       -- fg1
-    },
-    new_tab = {
-      bg_color = "#1d2021",
-      fg_color = "#928374",
-    },
-  },
+	tab_bar = {
+		background = "#1d2021", -- bg0_h (darkest)
+		active_tab = {
+			bg_color = "#282828", -- bg0
+			fg_color = "#ebdbb2", -- fg1
+			intensity = "Bold",
+		},
+		inactive_tab = {
+			bg_color = "#1d2021", -- bg0_h
+			fg_color = "#928374", -- gray
+		},
+		inactive_tab_hover = {
+			bg_color = "#3c3836", -- bg1
+			fg_color = "#ebdbb2", -- fg1
+		},
+		new_tab = {
+			bg_color = "#1d2021",
+			fg_color = "#928374",
+		},
+	},
 }
 
 -- ── Cursor ─────────────────────────────────────────
@@ -62,11 +62,11 @@ config.enable_scroll_bar = false
 
 -- ── Keys ───────────────────────────────────────────
 config.keys = {
-  { key = "d", mods = "CTRL|SHIFT", action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
-  { key = "e", mods = "CTRL|SHIFT", action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }) },
-  { key = "=", mods = "CTRL",       action = wezterm.action.IncreaseFontSize },
-  { key = "-", mods = "CTRL",       action = wezterm.action.DecreaseFontSize },
-  { key = "0", mods = "CTRL",       action = wezterm.action.ResetFontSize },
+	{ key = "d", mods = "CTRL|SHIFT", action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+	{ key = "e", mods = "CTRL|SHIFT", action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }) },
+	{ key = "=", mods = "CTRL", action = wezterm.action.IncreaseFontSize },
+	{ key = "-", mods = "CTRL", action = wezterm.action.DecreaseFontSize },
+	{ key = "0", mods = "CTRL", action = wezterm.action.ResetFontSize },
 }
 
 -- ── Misc ───────────────────────────────────────────
