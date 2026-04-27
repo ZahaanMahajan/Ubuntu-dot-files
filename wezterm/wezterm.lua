@@ -9,11 +9,11 @@ config.color_scheme = "Gruvbox dark, hard (base16)"
 
 -- ── Font ───────────────────────────────────────────
 config.font = wezterm.font_with_fallback({
-	{ family = "JetBrainsMono Nerd Font", weight = "Medium" },
-	{ family = "JetBrains Mono", weight = "Medium" },
+	{ family = "JetBrainsMono Nerd Font", weight = "Regular" },
+	{ family = "JetBrains Mono", weight = "Regular" },
 	"Noto Color Emoji",
 })
-config.font_size = 13.0
+config.font_size = 15.0
 config.line_height = 1.2
 
 -- ── Window ─────────────────────────────────────────
