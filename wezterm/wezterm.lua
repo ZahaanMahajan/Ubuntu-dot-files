@@ -17,7 +17,7 @@ config.font_size = 15.0
 config.line_height = 1.2
 
 -- ── Window ─────────────────────────────────────────
-config.window_background_opacity = 0.95
+config.window_background_opacity = 0.9
 config.window_padding = { left = 12, right = 12, top = 12, bottom = 4 }
 config.window_decorations = "RESIZE"
 config.initial_cols = 140
