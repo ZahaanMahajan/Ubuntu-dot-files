@@ -1,8 +1,9 @@
 -- lua/zahaan/plugins/nvim-tree.lua --
+-- It is Disabled right now if you want to use it (enable it on line 6)
 return {
 	"nvim-tree/nvim-tree.lua",
 	dependencies = { "antosha417/nvim-lsp-file-operations" },
-	enabled = true,
+	enabled = false,
 	config = function()
 		require("lsp-file-operations").setup()
 		-- recommended settings from nvim-tree documentation
