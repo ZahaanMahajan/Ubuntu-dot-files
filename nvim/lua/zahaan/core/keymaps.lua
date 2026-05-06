@@ -2,6 +2,14 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
+-- Dismiss all notifications (toasts in the top-right)
+keymap.set("n", "<leader>un", function()
+	require("notify").dismiss({ silent = true, pending = true })
+end, { desc = "Dismiss notifications" })
+
+-- Show previosu notifications (toasts in the top-right)
+vim.keymap.set("n", "<leader>uh", "<cmd>Notifications<cr>", { desc = "Notification history" })
+
 -- Do things without affecting the registers
 keymap.set("n", "x", '"_x')
 

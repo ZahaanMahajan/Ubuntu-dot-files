@@ -28,13 +28,14 @@ return {
 					respect_gitignore = false,
 					hidden = true,
 					grouped = true,
-					previewer = true, -- turn preview on
+					previewer = true,
 					initial_mode = "normal",
-					layout_strategy = "horizontal", -- preview on the right
+					layout_strategy = "horizontal",
 					layout_config = {
-						height = 0.9, -- 90% of screen height
-						width = 0.9, -- 90% of screen width
-						preview_width = 0.6, -- preview takes 60% (right side)
+						height = 0.9,
+						width = 0.95,
+						preview_width = 0.5,
+						preview_cutoff = 120,
 						prompt_position = "top",
 					},
 				})
