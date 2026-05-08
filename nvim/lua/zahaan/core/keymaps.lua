@@ -28,10 +28,6 @@ keymap.set("n", "<C-a>", "gg<S-v>G")
 -- Save file with Ctrl+S (works in normal, insert, and visual modes)
 vim.keymap.set({ "n", "i", "v" }, "<C-s>", "<Esc><cmd>w<CR>", { desc = "Save file" })
 
--- Typr Typing Practice
-keymap.set("n", "ty", "<cmd>Typr<CR>")
-keymap.set("n", "tys", "<cmd>TyprStats<CR>")
-
 -- New tab
 keymap.set("n", "te", ":tabedit")
 keymap.set("n", "<tab>", ":tabnext<Return>", opts)
