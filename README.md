@@ -4,6 +4,7 @@ A collection of terminal and editor configs centered around a **Gruvbox** theme 
 
 ![vim-1](assets/vim-1.png)
 ![vim-2](assets/vim-2.png)
+![superfile](assets/superfile.png)
 
 ---
 
@@ -16,6 +17,7 @@ A collection of terminal and editor configs centered around a **Gruvbox** theme 
 | [tmux](tmux/README.md) | Terminal multiplexer with Gruvbox status line | `tmux/tmux.conf` |
 | [KMonad](kmonad/README.md) | System-level keyboard remapper — Vim navigation on any keyboard | `kmonad/kmonad-template.kbd` |
 | [Starship](starship/README.md) | Cross-shell prompt with Gruvbox powerline segments | `starship/starship.toml` |
+| [Superfile](superfile/README.md) | TUI file manager with Vim navigation and image previews | `superfile/` |
 | [Bash Files](bashfiles/README.md) | Modular alias library — 20 topic files loaded at shell startup | `~/.aliases.d/` |
 
 ---
@@ -37,6 +39,9 @@ Remaps `Caps Lock` and `Left Ctrl` into a dual-purpose key: tap for `Ctrl`, hold
 ### [Starship](starship/README.md)
 A Gruvbox-themed powerline prompt built on Starship, showing OS icon, username, directory (with icon substitutions), git branch and status, active language runtimes (Node, Python, Rust, Go, and more), Docker/Conda context, and a live `HH:MM` clock — all in a single segmented strip.
 
+### [Superfile](superfile/README.md)
+A pretty, multi-panel terminal file manager themed Gruvbox dark hard, with Vim-style navigation (`h/j/k/l`), live file and image previews, a pinned sidebar, rounded borders, and `cd-on-quit` so quitting drops your shell into the last directory you browsed. Editor and dir-editor are wired to Neovim.
+
 ### [Bash Files](bashfiles/README.md)
 Twenty numbered alias modules (`01-navigation.sh` through `20-backup.sh`) covering navigation, listing, file ops, git, Docker, tmux, Python, Node, editors, and productivity. A thin loader (`~/.alias.sh`) sources them all at startup. The `backupbash` command snapshots the live configs into timestamped directories under `~/.config/bashfiles/`.
 
@@ -46,7 +51,7 @@ Twenty numbered alias modules (`01-navigation.sh` through `20-backup.sh`) coveri
 
 | Dependency | Used by |
 |---|---|
-| **Nerd Font** (JetBrainsMono recommended) | WezTerm, Neovim, tmux, Starship |
+| **Nerd Font** (JetBrainsMono recommended) | WezTerm, Neovim, tmux, Starship, Superfile |
 | **Node.js 18+** | Neovim LSP servers |
 | **ripgrep** (`rg`) | Neovim Telescope live grep |
 | **fd** | Neovim Telescope file search |
