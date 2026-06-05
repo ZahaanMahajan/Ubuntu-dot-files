@@ -1,13 +1,13 @@
 -- lua/zahaan/plugins/colors.lua --
 return {
-	"ellisonleao/gruvbox.nvim",
+	"craftzdog/solarized-osaka.nvim",
 	priority = 1000,
 	config = function()
-		require("gruvbox").setup({
+		require("solarized-osaka").setup({
 			transparent_mode = false,
 		})
 		vim.cmd([[
-      colorscheme gruvbox
+      colorscheme solarized-osaka
     ]])
 	end,
 }
