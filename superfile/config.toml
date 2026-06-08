@@ -125,6 +125,8 @@ file_preview_width = 0
 # Default: false (no border)
 enable_file_preview_border = false
 
+sidebar_sections = ["pinned", "home"]
+
 #-- Sidebar Width
 # If you don't want to display the sidebar, you can input 0 directly.
 # Values recommended to be in 5–20.
