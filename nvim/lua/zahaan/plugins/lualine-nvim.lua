@@ -4,7 +4,7 @@ return {
 	"nvim-lualine/lualine.nvim",
 	config = function()
 		local colors = {
-			default_background = "#504945",
+			default_background = "073642",
 			default_text = "#EBDBB2",
 			modified_background = "#AA4542",
 			saved_background = "#84A598",
