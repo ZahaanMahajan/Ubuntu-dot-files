@@ -6,7 +6,7 @@ local config = wezterm.config_builder()
 
 -- ── Solarized Osaka Dark palette ───────────────────
 -- Base tones
-local base03 = "#0d1117" -- darkest background (Osaka deepens solarized's base03)
+local base03 = "#030f14" -- darkest background (Osaka deepens solarized's base03)
 local base02 = "#073642" -- background highlights
 local base01 = "#586e75" -- comments / secondary content
 local base00 = "#657b83" -- body text (light-bg use)
@@ -39,7 +39,7 @@ config.font_size = 15.0
 config.line_height = 1.2
 
 -- ── Window ─────────────────────────────────────────
-config.window_background_opacity = 0.97
+config.window_background_opacity = 0.9
 config.window_padding = { left = 12, right = 12, top = 12, bottom = 4 }
 config.window_decorations = "RESIZE"
 config.initial_cols = 140
