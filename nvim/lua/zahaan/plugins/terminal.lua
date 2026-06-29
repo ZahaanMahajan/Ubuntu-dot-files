@@ -5,9 +5,20 @@ return {
 	keys = {
 		{ "<C-/>", desc = "Toggle terminal" },
 		{ "<C-_>", desc = "Toggle terminal (fallback)" },
+
+		-- Moved the leader mappings here so they trigger the plugin to load!
+		{ "<leader>th", "<cmd>1ToggleTerm direction=horizontal<cr>", desc = "Horizontal terminal" },
+		{ "<leader>tf", "<cmd>2ToggleTerm direction=float<cr>", desc = "Float terminal" },
+		{ "<leader>tv", "<cmd>3ToggleTerm direction=vertical<cr>", desc = "Vertical terminal" },
 	},
 	opts = {
-		size = 15, -- height of horizontal terminal (in lines)
+		size = function(term)
+			if term.direction == "horizontal" then
+				return 15
+			elseif term.direction == "vertical" then
+				return vim.o.columns * 0.4
+			end
+		end,
 		open_mapping = [[<c-/>]], -- the main toggle key
 		shade_terminals = true, -- slightly darker bg for terminal windows
 		start_in_insert = true, -- already typing when terminal opens
